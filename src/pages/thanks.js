@@ -13,7 +13,7 @@ export default function thanks() {
 				<h2>Succesful Purchase!</h2>
 				<p>Thanks for buying.</p>
 				<p>Hope to see you again!</p>
-				<span rol="img" aria-label="emoji">
+				<span role="img" aria-label="emoji">
           🙌
 				</span>
 
