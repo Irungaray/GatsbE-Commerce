@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Content, Footer } from '../styles/components'
+import { Content, Footer } from "../styles/components"
 
 import Header from "./header"
 

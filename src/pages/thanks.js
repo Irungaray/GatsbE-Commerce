@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 
-import { SEO } from '../components'
-import { Button, Purchase } from '../styles/components'
+import { SEO } from "../components"
+import { Button, Purchase } from "../styles/components"
 
 export default function thanks() {
   return (
@@ -13,12 +13,12 @@ export default function thanks() {
         <h2>Succesful Purchase!</h2>
         <p>Thanks for buying.</p>
         <p>Hope to see you again!</p>
-        <span rol='img' aria-label='emoji'>🙌</span>
+        <span rol="img" aria-label="emoji">
+          🙌
+        </span>
 
-        <Link to='/'>
-          <Button>
-            Volver al catálogo
-          </Button>
+        <Link to="/">
+          <Button>Volver al catálogo</Button>
         </Link>
       </Purchase>
     </div>

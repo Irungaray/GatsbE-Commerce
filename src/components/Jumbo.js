@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react"
 
-import {StyledJumbo} from '../styles/components';
+import { StyledJumbo } from "../styles/components"
 
 export default function Jumbo() {
   return (
