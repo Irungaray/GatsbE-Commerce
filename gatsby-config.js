@@ -32,7 +32,6 @@ module.exports = {
       options: {
         prettier: {
           patterns: [
-            // the pattern "**/*.{js,jsx,ts,tsx}" is not used because we will rely on `eslint --fix`
             "**/*.{css,scss,less}",
             "**/*.{json,json5}",
             "**/*.{graphql}",
@@ -49,8 +48,6 @@ module.exports = {
           },
         },
       },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    }
   ],
 }
