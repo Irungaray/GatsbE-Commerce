@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export default function Product() {
-  return (
-    <div>
-      Product
-    </div>
-  )
+import { ProductDetail } from '../components';
+
+export default function Product({ pageContext }) {
+	return (
+		<ProductDetail {...pageContext} />
+	);
 }
