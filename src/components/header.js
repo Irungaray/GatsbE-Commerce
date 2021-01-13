@@ -17,7 +17,9 @@ const Header = ({ siteTitle }) => (
 				</MenuItem>
 
 				<MenuItem margin>
-					<a href="https://github.com/Irungaray" target="blank">About</a>
+					<a href="https://github.com/Irungaray" target="blank">
+            About
+					</a>
 				</MenuItem>
 
 				<MenuItem>
