@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { SEO } from './';
+import { SEO, Stars } from './';
 
 import priceFormat from '../utils/priceFormat';
 
@@ -14,7 +14,7 @@ import {
 	StyledProductDetail,
 } from '../styles/components';
 
-export default function ProductDetail({ unit_amount, sku: id, product: {name, images, metadata} }) {
+export default function ProductDetail({ unit_amount, sku: id, product: {name, images, description, metadata} }) {
 	const [size, setSize] = useState(3);
 	const [qty, setQty] = useState(1);
 	const formatedPrice = priceFormat(unit_amount * qty);
@@ -28,6 +28,12 @@ export default function ProductDetail({ unit_amount, sku: id, product: {name, im
 				<Tag>Popular</Tag>
 				<h2>{name}</h2>
 				<b>USD {formatedPrice}</b>
+
+				<Stars />
+
+				{metadata.wear && <h3>Color: Blue</h3>}
+
+				<small>{description}</small>
 
 				{metadata.wear && (
 					<SizeSelect selected={size}>
@@ -55,6 +61,8 @@ export default function ProductDetail({ unit_amount, sku: id, product: {name, im
               +
 					</button>
 				</QtySelect>
+
+				<Button>Add to Cart</Button>
 			</div>
 		</StyledProductDetail>
 	);
