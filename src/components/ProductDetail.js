@@ -15,9 +15,9 @@ import {
 } from '../styles/components';
 
 export default function ProductDetail({ unit_amount, sku: id, product: {name, images, metadata} }) {
-	const formatedPrice = priceFormat(unit_amount);
 	const [size, setSize] = useState(3);
 	const [qty, setQty] = useState(1);
+	const formatedPrice = priceFormat(unit_amount * qty);
 
 	return (
 		<StyledProductDetail>
