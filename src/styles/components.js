@@ -63,31 +63,34 @@ export const StyledJumbo = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem 2rem;
   color: white;
+  border-bottom: 2px solid grey;
   margin-bottom: 5rem;
   overflow: hidden;
   position: relative;
+  background-color: ${colors.lightBlue};
 
   div{
+    width: 100%
+    text-align: center;
     padding: 1rem;
-    width: 35vw;
   };
   & h2 {
     margin: 0;
     font-weight: 500;
-    font-size: 50px;
-  };
+    font-size: 5rem;
+    text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd, 4px 5px 4px rgba(110,206,199,0.56);
+  }
   & small{
     font-weight: 100;
-    font-size: 30px;
+    font-size: 1.6rem;
+    text-shadow: 3px 3px 4px #f6f8f9;
   };
   & img{
-    width: 100vw;
-    object-fit: none;
+    width: 35vw;
   };
   ${above.medium`
-    padding: 2rem 4rem;
+    padding: 2rem 5rem;
     flex-direction: row;
     & h2 {
       font-size: 9rem;
@@ -97,7 +100,7 @@ export const StyledJumbo = styled.div`
     };
   `}
   ${above.mediumL`
-    padding: 2rem 4rem;
+    padding: 2rem 5rem;
     flex-direction: row;
     & h2 {
       font-size: 7rem;
@@ -109,6 +112,7 @@ export const StyledJumbo = styled.div`
   ${above.large`
     padding: 2rem 10rem;
     flex-direction: row;
+
     & h2 {
       margin: 0;
       font-weight: 500;
@@ -119,7 +123,6 @@ export const StyledJumbo = styled.div`
   &:before{
     content: " ";
     background-color: red;
-    background-color: ${colors.darkBlue};
     z-index: -1;
     position: absolute;
     transform: rotate(-19deg);
@@ -145,13 +148,13 @@ export const StyledJumbo = styled.div`
 `;
 
 export const StyledProducts = styled.div`
-  background-color: ${colors.softGray};
+  background-color: ${colors.lightBlue};
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem 5rem 1rem;
   h2 {
-    color: ${colors.darkBlue};
+    color: white;
     font-size: 2rem;
   }
   & img {
@@ -183,7 +186,7 @@ export const StyledProducts = styled.div`
     a {
       text-decoration: none;
       color: ${colors.darkBlue};
-      font-size: 0.8rem;
+      font-size: 1.8rem;
       border-bottom: 3px solid ${colors.green};
       span {
         color: ${colors.green};
@@ -214,6 +217,7 @@ export const StyledProductDetail = styled.div`
   flex-direction: column;
   text-align: justify;
   height: 82vh;
+  background-color: ${colors.softGray};
   img {
     width: 100%;
     object-fit: cover;
