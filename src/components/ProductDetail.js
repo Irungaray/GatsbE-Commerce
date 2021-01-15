@@ -20,7 +20,7 @@ export default function ProductDetail({ id, product: {name, images, description,
 	let [qty, setQty] = useState(1);
 
 	const formatedPrice = priceFormat(unit_amount * qty);
-	const { cart, addToCart } = useContext(CartContext);
+	const { addToCart } = useContext(CartContext);
 
 	const handleSubmit  = () => {
 		addToCart({ id, name, images, metadata, quantity: qty, unit_amount });
@@ -35,8 +35,6 @@ export default function ProductDetail({ id, product: {name, images, description,
 	// 		return;
 	// 	}
 	// };
-
-	console.log(cart);
 
 	return (
 		<StyledProductDetail>

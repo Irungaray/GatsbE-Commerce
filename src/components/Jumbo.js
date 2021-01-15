@@ -12,7 +12,8 @@ export default function Jumbo({ description }) {
 				<small>{description}</small>
 			</div>
 
-			<Image name="icon" />
+			<img src="https://i.postimg.cc/R0RtVFz9/icon.png" alt="ELEPHANTs"/>
+			{/* <Image name="icon" /> */}
 		</StyledJumbo>
 	);
 }

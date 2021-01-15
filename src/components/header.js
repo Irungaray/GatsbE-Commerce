@@ -6,7 +6,7 @@ import { CartContext } from '../context';
 
 import { MenuItem, StyledHeader } from '../styles/components';
 
-const Header = ({ siteTitle }) => {
+const Header = ({  }) => {
 	const { cart } = useContext(CartContext);
 
 	return (
