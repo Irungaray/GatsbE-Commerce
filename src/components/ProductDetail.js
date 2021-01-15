@@ -17,16 +17,30 @@ import {
 
 export default function ProductDetail({ id, product: {name, images, description, metadata}, unit_amount }) {
 	const [size, setSize] = useState(3);
-	const [qty, setQty] = useState(1);
+	let [qty, setQty] = useState(1);
 
 	const formatedPrice = priceFormat(unit_amount * qty);
 	const { cart, addToCart } = useContext(CartContext);
 
 	const handleSubmit  = () => {
-		addToCart({ id, name, images, metadata, quantity: qty, unit_amount });
+		if (!(id.indexOf(cart))) {
+			addToCart({ id, name, images, metadata, quantity: qty, unit_amount });
+		} else {
+			setQty(qty + 1);
+			console.log('id in cart');
+		}
 	};
 
-	// console.log(cart);
+	// const handleSubmit  = () => {
+	// 	if (id.indexOf(cart[0])) {
+	// 		console.log('Id in cart');
+	// 		cart.quantity = qty++;
+	// 	} else {
+	// 		return;
+	// 	}
+	// };
+
+	console.log(cart);
 
 	return (
 		<StyledProductDetail>
