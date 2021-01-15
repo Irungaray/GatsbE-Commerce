@@ -23,12 +23,7 @@ export default function ProductDetail({ id, product: {name, images, description,
 	const { cart, addToCart } = useContext(CartContext);
 
 	const handleSubmit  = () => {
-		if (!(id.indexOf(cart))) {
-			addToCart({ id, name, images, metadata, quantity: qty, unit_amount });
-		} else {
-			setQty(qty + 1);
-			console.log('id in cart');
-		}
+		addToCart({ id, name, images, metadata, quantity: productQty, unit_amount });
 	};
 
 	// const handleSubmit  = () => {
