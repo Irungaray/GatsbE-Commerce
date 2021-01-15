@@ -23,9 +23,10 @@ export default function ProductDetail({ id, product: {name, images, description,
 	const { cart, addToCart } = useContext(CartContext);
 
 	const handleSubmit  = () => {
-		addToCart({ id, name, images, metadata, quantity: productQty, unit_amount });
+		addToCart({ id, name, images, metadata, quantity: qty, unit_amount });
 	};
 
+	// fix this
 	// const handleSubmit  = () => {
 	// 	if (id.indexOf(cart[0])) {
 	// 		console.log('Id in cart');

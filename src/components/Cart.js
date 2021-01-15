@@ -10,6 +10,7 @@ import { Button, StyledCart } from '../styles/components';
 export default function Cart() {
 	const { cart } = useContext(CartContext);
 	const [total, setTotal] = useState(0);
+	const [stripe, setStripe] = useState();
 
 	// console.log(cart);
 
@@ -20,8 +21,26 @@ export default function Cart() {
 	};
 
 	useEffect(() => {
+		setStripe(
+			window.Stripe(process.env.STRIPE_PK)		);
 		getTotal();
 	}, []);
+
+	const handleSubmit = async e => {
+		e.preventDefault();
+
+		let prod = cart.map(({ id, quantity }) => ({ price: id, quantity: quantity }));
+
+		const { error } = await stripe.redirectToCheckout({
+			lineItems: prod,
+			mode: 'payment',
+			successUrl: process.env.SUCCESS_REDIRECT,
+			cancelUrl: process.env.CANCEL_REDIRECT,
+		});
+		if (error) {
+			throw error;
+		}
+	};
 
 	return (
 		<StyledCart>
@@ -61,7 +80,7 @@ export default function Cart() {
 						<Button type='outline'>Go Back</Button>
 					</Link>
 
-					<Button>Buy</Button>
+					<Button onClick={handleSubmit} disabled={cart.length === 0}>Buy</Button>
 				</div>
 			</nav>
 		</StyledCart>
