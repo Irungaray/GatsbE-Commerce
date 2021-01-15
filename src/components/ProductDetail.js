@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { Link } from 'gatsby';
 
 import { SEO, Stars } from './';
 
@@ -8,7 +9,6 @@ import { CartContext } from '../context';
 import {
 	Tag,
 	SizeButton,
-	QtyButton,
 	QtySelect,
 	SizeSelect,
 	Button,
@@ -81,7 +81,11 @@ export default function ProductDetail({ id, product: {name, images, description,
 					</button>
 				</QtySelect>
 
-				<Button onClick={handleSubmit}>Add to Cart</Button>
+				<Button onClick={handleSubmit}>ADD TO CART!</Button>
+				<div>{' '}</div>
+				<Link to="/">
+					<Button>KEEP BUYIN'!</Button>
+				</Link>
 			</div>
 		</StyledProductDetail>
 	);

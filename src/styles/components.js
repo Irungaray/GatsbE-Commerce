@@ -28,26 +28,25 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   a {
     height: 100%;
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
   & > a > img {
     margin: 0;
     background-color: ${colors.green};
     height: 100%;
-    padding: 0.5rem 0.8rem;
   }
   & ul {
     list-style: none;
     margin: 0;
     display: flex;
-    font-size: 0.2rem;
+    font-size: 0.5rem;
   }
   ${above.medium`
     padding: 0 2rem;
     height: 3.5rem;
     a{
       height: 100%;
-      font-size: 0.8rem;
+      font-size: 0.5rem;
     }
   `}
   ${above.large`
@@ -55,7 +54,7 @@ export const StyledHeader = styled.header`
     height: 4.5rem;
     a{
       height: 100%;
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   `}
 `;
@@ -77,20 +76,21 @@ export const StyledJumbo = styled.div`
   & h2 {
     margin: 0;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 50px;
   };
   & small{
     font-weight: 100;
-    font-size: 0.6rem;
+    font-size: 30px;
   };
   & img{
-    width: 35vw;
+    width: 100vw;
+    object-fit: none;
   };
   ${above.medium`
     padding: 2rem 4rem;
     flex-direction: row;
     & h2 {
-      font-size: 1rem;
+      font-size: 9rem;
     };
     & small{
       font-size: 0.8rem;
@@ -100,10 +100,10 @@ export const StyledJumbo = styled.div`
     padding: 2rem 4rem;
     flex-direction: row;
     & h2 {
-      font-size: 1rem;
+      font-size: 7rem;
     };
     & small{
-      font-size: 0.8rem;
+      font-size: 2rem;
     };
   `}
   ${above.large`
@@ -112,7 +112,7 @@ export const StyledJumbo = styled.div`
     & h2 {
       margin: 0;
       font-weight: 500;
-      font-size: 2rem;
+      font-size: 7rem;
     };
   `}
 
@@ -322,8 +322,8 @@ export const MenuItem = styled.li`
     border-right: ${({ margin }) => (margin ? '1px solid white' : '')};
     padding: ${({ margin }) => (margin ? '0 26px 0 26px' : '0 0 0 26px')};
     & img{
-      margin-right: 5px; 
-      width: 0.7rem;
+      margin-right: 5px;
+      width: 1.5rem;
     }
   `}
 `;
@@ -337,6 +337,7 @@ export const Footer = styled.footer`
   padding: 2rem;
   position: relative;
   bottom: 0;
+  top: 0;
   a {
     color: ${colors.green};
     margin-left: 0.3rem;
@@ -355,6 +356,8 @@ export const Tag = styled.span`
 
 export const SizeButton = styled.button`
   padding: calc(0.4rem + 1px);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
   background-color: transparent;
   border: 2px solid rgba(0, 0, 0, 0.1);
   color: #272727;
@@ -422,6 +425,7 @@ export const Button = styled.button`
 			? `3px solid ${colors.darkBlue}`
 			: `3px solid ${colors.green}`};
   border-radius: 12px;
+  margin-bottom: 20px;
   a {
     text-decoration: none;
     color: ${({ type }) => (type === 'outline' ? colors.darkBlue : 'white')};

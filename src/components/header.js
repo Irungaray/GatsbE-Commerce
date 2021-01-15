@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => {
 	return (
 		<StyledHeader>
 			<Link to="/">
-				<img src="https://i.postimg.cc/6q3pg48v/Logo.png" alt="Logo" />
+				<img src="https://i.postimg.cc/rsWFsntW/Logo.png" alt="Logo" />
 			</Link>
 
 			<nav>
