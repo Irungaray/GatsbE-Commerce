@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 
 import { CartContext } from '../context';
@@ -6,10 +6,22 @@ import priceFormat from '../utils/priceFormat';
 
 import { Button, StyledCart } from '../styles/components';
 
+
 export default function Cart() {
 	const { cart } = useContext(CartContext);
+	const [total, setTotal] = useState(0);
 
-	console.log(cart);
+	// console.log(cart);
+
+	const getTotal = () => {
+		setTotal(
+			cart.reduce((acc, current) => acc + current.unit_amount * current.quantity, 0)
+		);
+	};
+
+	useEffect(() => {
+		getTotal();
+	}, []);
 
 	return (
 		<StyledCart>
@@ -20,11 +32,11 @@ export default function Cart() {
 						<th>Products</th>
 						<th>Price</th>
 						<th>Quantity</th>
-						<th>Total</th>
+						<th>Subtotal</th>
 					</tr>
 
 					{cart.map(cards => (
-						<tr key={cards.sku}>
+						<tr key={cards.id}>
 							<td>
 								<img src={cards.images} alt={cards.name} />
 								{cards.name}
@@ -39,7 +51,8 @@ export default function Cart() {
 
 			<nav>
 				<div>
-					<h3>Subtotal:</h3>
+					<h3>Total:</h3>
+					<small>USD {priceFormat(total)}</small>
 					<small>Total</small>
 				</div>
 

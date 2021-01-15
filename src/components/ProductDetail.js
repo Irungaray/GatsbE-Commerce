@@ -15,7 +15,7 @@ import {
 	StyledProductDetail,
 } from '../styles/components';
 
-export default function ProductDetail({ unit_amount, sku: id, product: {name, images, description, metadata} }) {
+export default function ProductDetail({ id, product: {name, images, description, metadata}, unit_amount }) {
 	const [size, setSize] = useState(3);
 	const [qty, setQty] = useState(1);
 
@@ -23,7 +23,7 @@ export default function ProductDetail({ unit_amount, sku: id, product: {name, im
 	const { cart, addToCart } = useContext(CartContext);
 
 	const handleSubmit  = () => {
-		addToCart({unit_amount, sku: id, name, images, metadata, quantity: qty});
+		addToCart({ id, name, images, metadata, quantity: qty, unit_amount });
 	};
 
 	// console.log(cart);
