@@ -9,6 +9,8 @@ import { Button, StyledCart } from '../styles/components';
 export default function Cart() {
 	const { cart } = useContext(CartContext);
 
+	console.log(cart);
+
 	return (
 		<StyledCart>
 			<h2>Cart</h2>
@@ -21,16 +23,17 @@ export default function Cart() {
 						<th>Total</th>
 					</tr>
 
-					{cart.map(cards => {
+					{cart.map(cards => (
 						<tr key={cards.sku}>
-							<img src={cards.image} alt={cards.name} />
-							{cards.name}
-
-							<td>USD {priceFormat(cards.price)}</td>
+							<td>
+								<img src={cards.images} alt={cards.name} />
+								{cards.name}
+							</td>
+							<td>USD {priceFormat(cards.unit_amount)}</td>
 							<td>{cards.quantity}</td>
-							<td>USD {priceFormat(cards.price * cards.quantity)}</td>
-						</tr>;
-					})}
+							<td>USD {priceFormat(cards.unit_amount * cards.quantity)}</td>
+						</tr>
+					))}
 				</tbody>
 			</table>
 

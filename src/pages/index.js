@@ -34,7 +34,7 @@ export const query = graphql`
 `;
 
 const IndexPage = ({ data }) => {
-	console.log(data);
+	// console.log(data);
 
 	return (
 		<>
