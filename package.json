@@ -40,7 +40,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "CI= npm run build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx --fix",
