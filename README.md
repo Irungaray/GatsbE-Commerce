@@ -1,11 +1,11 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://jumbostore.netlify.app/">
-    <img alt="JUMBO STORE" src="https://i.postimg.cc/Pr47h3Gp/localhost-8000-price-1-IACMHBirkx-QCHVnn-UCKS7qa-1.png" width="60" />
+    <img alt="JUMBO STORE" src="https://i.postimg.cc/Pr47h3Gp/localhost-8000-price-1-IACMHBirkx-QCHVnn-UCKS7qa-1.png" />
   </a>
 </p>
 <h1 align="center">
-  J U M B O   S T O R E ! ! !
+  J U M B O _ S T O R E ! !1 !
 </h1>
 
 <h2 align="center">
@@ -24,7 +24,7 @@ IF YOU ARE ANXIOUS, CHECK THE SITE AT
 
 https://jumbostore.netlify.app/
 
-AND GET YOU SOME NICE VIDEOCARD FROM J U M B O   S T O R E!1!!
+AND GET YOU SOME NICE VIDEOCARD FROM J U M B O  _  S T O R E!1!!
 
 ## 🧐 SOME OF THE FEATURES ARE:
 
