@@ -1,10 +1,10 @@
-import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 export default function Image({ name }) {
-	const data = useStaticQuery (
-		graphql`
+  const data = useStaticQuery(
+    graphql`
       query GET_IMAGE {
         icon: file(relativePath: { eq: "smoothIcon.png" }) {
           childImageSharp {
@@ -15,9 +15,7 @@ export default function Image({ name }) {
         }
       }
     `
-	);
+  )
 
-	return (
-		<Img fluid={data[name].childImageSharp.fluid} />
-	);
+  return <Img fluid={data[name].childImageSharp.fluid} />
 }
