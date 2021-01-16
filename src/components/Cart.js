@@ -22,7 +22,7 @@ export default function Cart() {
 
 	useEffect(() => {
 		setStripe(
-			window.Stripe(process.env.STRIPE_PK)
+			window.Stripe(process.env.GATSBY_STRIPE_PK)
 		);
 		getTotal();
 	}, []);

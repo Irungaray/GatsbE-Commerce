@@ -65,10 +65,11 @@ export const StyledJumbo = styled.div`
   justify-content: center;
   color: white;
   border-bottom: 2px solid grey;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   overflow: hidden;
   position: relative;
   background-color: ${colors.lightBlue};
+  text-align: center;
 
   div{
     width: 100%
@@ -79,15 +80,16 @@ export const StyledJumbo = styled.div`
     margin: 0;
     font-weight: 500;
     font-size: 5rem;
+    letter-spacing: 9px;
     text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd, 4px 5px 4px rgba(110,206,199,0.56);
   }
   & small{
     font-weight: 100;
     font-size: 1.6rem;
+    letter-spacing: 9px;
     text-shadow: 3px 3px 4px #f6f8f9;
   };
   & img{
-    width: 35vw;
   };
   ${above.medium`
     padding: 2rem 5rem;
@@ -98,14 +100,19 @@ export const StyledJumbo = styled.div`
     & small{
       font-size: 0.8rem;
     };
+    & img{
+      width: 35vw;
+    };
   `}
   ${above.mediumL`
     padding: 2rem 5rem;
     flex-direction: row;
     & h2 {
+      letter-spacing: 20px;
       font-size: 7rem;
     };
     & small{
+      letter-spacing: 8px;
       font-size: 2rem;
     };
   `}
@@ -219,8 +226,8 @@ export const StyledProductDetail = styled.div`
   height: 82vh;
   background-color: ${colors.softGray};
   img {
-    width: 100%;
-    object-fit: cover;
+    width: 75%;
+    object-fit: scale-down;
     object-position: center;
     margin: 0;
   }
@@ -263,7 +270,6 @@ export const StyledProductDetail = styled.div`
   ${above.large`
     flex-direction: row;
     height: 82vh;
-    padding: 2rem 10rem;
   `}
 `;
 
@@ -271,6 +277,7 @@ export const StyledCart = styled.div`
   padding: 1rem;
   height: 80vh;
   overflow-y: scroll;
+  background-color: ${colors.softGray};
   h2 {
     border-bottom: 2px solid ${colors.darkBlue};
     color: ${colors.darkBlue};
@@ -338,15 +345,20 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  position: relative;
+  padding: 0.4rem;
+  position: fixed;
+  left: 0;
   bottom: 0;
-  top: 0;
+  width: 100%;
+  color: white;
   a {
     color: ${colors.green};
     margin-left: 0.3rem;
     text-decoration: none;
   }
+  ${above.medium`
+   padding: 1rem;
+  `}
 `;
 
 export const Tag = styled.span`
