@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import { SEO, Jumbo, Product } from "../components"
+import { SEO, Jumbo, Product } from '../components';
 
 export const query = graphql`
   query GET_DATA {
@@ -31,20 +31,20 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const IndexPage = ({ data }) => {
-  // console.log(data);
+	// console.log(data);
 
-  return (
-    <>
-      <Jumbo
-        description={data.allSite.edges[0].node.siteMetadata.description}
-      />
-      <SEO title="Home" />
-      <Product products={data.allStripePrice.edges} />
-    </>
-  )
-}
+	return (
+		<>
+			<Jumbo
+				description={data.allSite.edges[0].node.siteMetadata.description}
+			/>
+			<SEO title="Home" />
+			<Product products={data.allStripePrice.edges} />
+		</>
+	);
+};
 
-export default IndexPage
+export default IndexPage;
