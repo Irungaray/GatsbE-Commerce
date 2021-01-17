@@ -28,6 +28,7 @@ export default function ProductDetail({
 
 	const handleSubmit = () => {
 		addToCart({ id, name, images, metadata, quantity: qty, unit_amount });
+		alert(`${name.toUpperCase()} ADDED TO CART!!1!`);
 	};
 
 	// fix this
