@@ -38,8 +38,8 @@ export default function Cart() {
 		const { error } = await stripe.redirectToCheckout({
 			lineItems: prod,
 			mode: 'payment',
-			successUrl: process.env.SUCCESS_REDIRECT,
-			cancelUrl: process.env.CANCEL_REDIRECT,
+			successUrl: process.env.GATSBY_SUCCESS_REDIRECT,
+			cancelUrl: process.env.GATSBY_CANCEL_REDIRECT,
 		});
 		if (error) {
 			throw error;

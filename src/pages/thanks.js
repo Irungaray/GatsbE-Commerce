@@ -10,16 +10,17 @@ export default function thanks() {
 			<SEO title="Great purchase!" />
 
 			<Purchase>
-				<h2>Succesful Purchase!</h2>
-				<p>Thanks for buying.</p>
-				<p>Hope to see you again!</p>
+				<h2>SUCCESSFULL PURCHASE!!1!!</h2>
+				<p>THANKS FOR TRUSTING US.</p>
+				<p>HOPE YOU ENJOY YOUR ELEPHANT VIDEOCARD!1!!!</p>
 				<span role="img" aria-label="emoji">
-          🙌
+          😎
 				</span>
 
 				<Link to="/">
 					<Button>GO BACK</Button>
 				</Link>
+				<img src="https://i.postimg.cc/d08Hz1wF/icon.png" alt="Thanks Logo"/>
 			</Purchase>
 		</div>
 	);
